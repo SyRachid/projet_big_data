@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body style=" background-image: url('ajHHxxEgKXjYK4J_1686002391.jpg') ;">
+<div style = 'text-align:center; border:2px solid red; height: 500px ; width: 400px; margin:30px auto; background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);;padding:20px '>
+<div style = 'font-weight:bold; text-align:center; padding: 30px;font-family:arial; color:white'>PREDICTION DE LA VENTE DE PUB OPTIMALE
+<div style ='font-size: 0.8;font-weight:normal ;margin-top:5px; color:white'>Predire les montants de vente en fonction des sommes des pub de ventes </div></div>
+<div style='margin:10px auto; display:inline-block;width:300px'>
+<label style="color:white;font-family:arial">Montant de la PUB TV en $</label>
+  <input type='text' id ='x1' style='width:100%; padding:10px ;margin:10px 0; border:0 'placeholder = 'TV'>
+<label style="color:white;font-family:arial">Montant de la PUB RADIO en $</label>
+  <input type='text' id ='x2' style='width:100%; padding:10px ;margin:10px 0; border:0' placeholder = 'Radio'>
+<label style="color:white;font-family:arial">Montant de la PUB en NEWSPAPER en $</label>
+
+  <input type='text' id='x3' style='width:100%; padding:10px ;margin:10px 0; border:0'placeholder = 'newspaper'>
+
+</div>
+<div  id='button' style=' cursor:pointer; margin-left:50px ;text-align: center; background-color:green; color:white; margin-top:20px; font-weight:bold; padding:10px; width:300px; text-align:center;font-family:Arial, hevtica; font-size:1.2em'>Predire</div>
+<div id ='response' style=' margin-left:50px ;text-align:center; color:white;margin-top:20px;font-weight:bold; padding:10px; width:300px; text-align:center;font-family:Arial, hevtica; font-size:1.2em'>response:</div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+$(document).ready(function(){
+  $("#button").click(function(){
+    let x1 = $("#x1").val();
+    let x2 = $("#x2").val();
+    let x3 = $("#x3").val();
+    let w0 = 2.938889;
+    let w1 = 0.04576465;
+  	let w2 = 0.18832002;
+  	let w3 = -0.0010;
+  var ans = w0+ w1*x1 + w2*x2 + w3*x3;
+  
+	$('#response').html(ans+'$');
+   
+  });
+});
+</script>
+
+
